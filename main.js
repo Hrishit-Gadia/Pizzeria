@@ -1,26 +1,21 @@
-menu_list_array = ["Veg Margherita Pizza","Veg Pizza","Thin Crust Pizza","Paneer Pizza","Pizzeria Special"];
+var Names =
+    ["Me", "My Mother", "My Father", "My Brother", "My GrandParents"];
 
-function getmenu(){
-var htmldata;
-htmldata="<ol class='menulist'>"
-menu_list_array.sort();
-for (i=0; i<menu_list_array.length; i++){
-htmldata = htmldata + '<li>' + menu_list_array[i] + '</li>';
-}
-htmldata = htmldata + "</ol>"
-document.getElementById("display_menu").innerHTML = htmldata;
-}
+var Images =
+    ["Me Clipart.png",
+        "Mom Clipart.jpeg",
+        "Dad Clipart.jpeg",
+        "Brother Clipart.jpeg",
+        "Grandparents.png",];
 
-function add_item(){
-var htmldata;
-var item = document.getElementById("add_item").value;
-menu_list_array.push(item);
-menu_list_array.sort();
-htmldata = "<section class='cards'>"
-for(var i=0; i<menu_list_array.length; i++){
-    htmldata = htmldata + '<div class="card">' +
-    '<img src="images/pizzaImg.png">' + menu_list_array[i] + '</div>'
-}
-htmldata = htmldata + "</section>"
-document.getElementById("display_addedmenu").innerHTML = htmldata;
+var i = 0;
+function Update() {
+    i++;
+    if (i > 4) {
+        i = 0;
+    }
+    var NewImage = Images[i];
+    var NewName = Names[i];
+    document.getElementById("Picture").src = NewImage;
+    document.getElementById("Relation").innerHTML = NewName;
 }
