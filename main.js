@@ -1,5 +1,5 @@
-menu_list_array = ["Veg Margherita Pizza", "Veg Pizza", "Thin Crust Pizza", "Paneer Pizza", "Hit Time! Special", "Exclusive Cheese Pizza",];
-rate_list_array = ["150", "200", "175", "225", "300", "275", "200"];
+menu_list_array = ["Veg Margherita Pizza", "Veg Pizza", "Thin Crust Pizza", "Paneer Pizza", "Vision Time! Special", "Exclusive Cheese Pizza","Neapolitan Pizza", "Chicago Pizza","New York-Style Pizza","Burhanpur's Special","Detroit Pizza","St. Louis Pizza","California Pizza","Greek Pizzax"];
+rate_list_array = ["150", "200", "175", "225", "300", "275", "200", "350" , "300","400","350","300","400","500"];
 cart_list_array = [];
 position_list_array = [];
 order_Price_array = [];
