@@ -110,6 +110,7 @@ function test() {
         localStorage.setItem("Product-Name-"+e, product_Name);
         rate_Name = rate_list_array[e];
         localStorage.setItem("Rate-Name-"+e, rate_Name);
-        localStorage.setItem("Number",position_list_array.length)
     }
+    qwerty = position_list_array.length
+    localStorage.setItem("Number", qwerty);
 }
