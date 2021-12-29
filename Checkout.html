@@ -13,9 +13,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap" rel="stylesheet">
+    <script src="Checkout.js"></script>
 </head>
 
-<body id="body">
+<body id="body" onload="Test()">
 
     <div class="topnav">
         <a>Hit Time!</a>
@@ -43,7 +44,7 @@
                             <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
                             <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
                             <label for="city"><i class="fa fa-institution"></i> City</label>
-                            <input type="text" id="city" name="city" placeholder="New York">
+                            <input type="text" id="city" name="city" placeholder="City">
 
                             <div class="row">
                                 <div class="col-50">
@@ -71,15 +72,15 @@
                             <label for="ccnum">Credit card number</label>
                             <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
                             <label for="expmonth">Exp Month</label>
-                            <input type="text" id="expmonth" name="expmonth" placeholder="September">
+                            <input type="text" id="expmonth" name="expmonth" placeholder="MM">
                             <div class="row">
                                 <div class="col-50">
                                     <label for="expyear">Exp Year</label>
-                                    <input type="text" id="expyear" name="expyear" placeholder="2018">
+                                    <input type="text" id="expyear" name="expyear" placeholder="YY">
                                 </div>
                                 <div class="col-50">
                                     <label for="cvv">CVV</label>
-                                    <input type="text" id="cvv" name="cvv" placeholder="352">
+                                    <input type="text" id="cvv" name="cvv" placeholder="CVV">
                                 </div>
                             </div>
                         </div>
@@ -96,10 +97,8 @@
             <div class="container">
                 <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span>
                 </h4>
-                <p><a href="#">Product 1</a> <span class="price">$15</span></p>
-                <p><a href="#">Product 2</a> <span class="price">$5</span></p>
-                <p><a href="#">Product 3</a> <span class="price">$8</span></p>
-                <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+                <p id="Objects">
+                </p>
                 <hr>
                 <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
             </div>
@@ -109,7 +108,6 @@
     <div>
         <img class="img-responsive" src="topping.png">
     </div>
-
 
 </body>
 

@@ -1,4 +1,4 @@
-menu_list_array = ["Veg Margherita Pizza", "Veg Pizza", "Thin Crust Pizza", "Paneer Pizza", "Vision Time! Special", "Exclusive Cheese Pizza","Neapolitan Pizza", "Chicago Pizza","New York-Style Pizza","Burhanpur's Special","Detroit Pizza","St. Louis Pizza","California Pizza","Greek Pizzax"];
+menu_list_array = ["Veg Margherita Pizza", "Veg Pizza", "Thin Crust Pizza", "Paneer Pizza", "Vision Time! Special", "Exclusive Cheese Pizza","Neapolitan Pizza", "Chicago Pizza","New York-Style Pizza","Burhanpur's Special","Detroit Pizza","St. Louis Pizza","California Pizza","Greek Pizza"];
 rate_list_array = ["150", "200", "175", "225", "300", "275", "200", "350" , "300","400","350","300","400","500"];
 cart_list_array = [];
 position_list_array = [];
@@ -70,6 +70,8 @@ function Shop(clicked_id) {
         document.getElementById("Cart").innerHTML = cartdata;
         window.alert(clicked_id + ' Added to your Cart!');
     }
+
+    test();
 }
 
 function checkAge(age) {
@@ -100,4 +102,14 @@ function Quantity(NNumber) {
 
 function checkCart(Value) {
     return Value == orderMaterial
+}
+
+function test() {
+    for (var e = 0; e < position_list_array.length; e++){
+        product_Name = menu_list_array[e];
+        localStorage.setItem("Product-Name-"+e, product_Name);
+        rate_Name = rate_list_array[e];
+        localStorage.setItem("Rate-Name-"+e, rate_Name);
+        localStorage.setItem("Number",position_list_array.length)
+    }
 }
