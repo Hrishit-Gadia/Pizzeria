@@ -1,5 +1,5 @@
-menu_list_array = ["Veg Margherita Pizza", "Veg Pizza", "Thin Crust Pizza", "Paneer Pizza", "Vision Time! Special", "Exclusive Cheese Pizza","Neapolitan Pizza", "Chicago Pizza","New York-Style Pizza","Burhanpur's Special","Detroit Pizza","St. Louis Pizza","California Pizza","Greek Pizza"];
-rate_list_array = ["150", "200", "175", "225", "300", "275", "200", "350" , "300","400","350","300","400","500"];
+menu_list_array = ["Veg Margherita Pizza", "Veg Pizza", "Thin Crust Pizza", "Paneer Pizza", "Vision Time! Special", "Exclusive Cheese Pizza","Neapolitan Pizza", "Chicago Pizza","New York-Style Pizza","Burhanpur's Special","Detroit Pizza","St. Louis Pizza","California Pizza","Greek Pizza","Cheese Burst Pizza"];
+rate_list_array = ["150", "200", "175", "225", "300", "275", "200", "350" , "300","400","350","300","400","500","450"];
 cart_list_array = [];
 position_list_array = [];
 order_Price_array = [];
@@ -9,10 +9,10 @@ function getmenu() {
     var htmldata;
     htmldata = "<ol class='menulist'>"
     for (i = 0; i < menu_list_array.length; i++) {
-        htmldata = htmldata + '<li>' + menu_list_array[i] + '   ' + '<div class="rate"> - ' + rate_list_array[i] + '</div>' + '&nbsp; <img src="cart.png" class="cart" onclick="Shop(this.id)" id="' + menu_list_array[i] + '"></li>';
+        htmldata = htmldata + '<li> <div class="Design">' + menu_list_array[i] + '   ' + '<div class="rate"> - ' + rate_list_array[i] + '</div>' + '&nbsp; <img src="cart.png" class="cart" onclick="Shop(this.id)" id="' + menu_list_array[i] + '"></div></li>';
     }
     htmldata = htmldata + "</ol>"
-    document.getElementById("display_menu").innerHTML = htmldata;
+    document.getElementById("Scroll").innerHTML = htmldata;
 }
 
 function add_item() {
@@ -24,7 +24,7 @@ function add_item() {
     document.getElementById("rate_item").value = "";
     var rate = price;
     if (item == "") {
-        window.alert('Kindly add a name for the pizza');
+        window.alert('Kindly add a name for the Pizza');
     }
     else {
         if (item.endsWith("Pizza")) {
@@ -45,7 +45,7 @@ function add_item() {
             }
         }
         else {
-            window.alert('Kindly Add Pizza after the name');
+            window.alert('Kindly Add "Pizza" after the name');
         }
     }
 }
